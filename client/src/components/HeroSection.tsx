@@ -47,7 +47,7 @@ export default function HeroSection() {
             transition={{ duration: 0.9, delay: 0.5 }}
             className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] text-white mb-6"
           >
-            Coimbra
+            Luis Coimbra
           </motion.h1>
 
           <motion.p
