@@ -52,17 +52,12 @@ export default function Navbar() {
       }`}
     >
       <nav className="container flex items-center justify-between h-18 md:h-20">
-        {/* Brand */}
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          className={`font-display text-2xl md:text-[1.65rem] font-semibold tracking-tight transition-colors duration-500 ${scrolled ? 'text-navy' : 'text-white'}`}
-        >
-          Luis Coimbra
-        </a>
+        {/* Brand - scroll to top */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="w-8"
+          aria-label="Scroll to top"
+        />
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">

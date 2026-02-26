@@ -224,7 +224,7 @@ export const translations: Record<Locale, Translations> = {
       titleLine1: "Inspiring Audiences",
       titleHighlight: "Around the World",
       description:
-        "Luis delivers powerful, thought-provoking keynotes that combine deep industry knowledge with compelling storytelling. His presentations leave audiences with actionable insights and a renewed sense of purpose.",
+        "Coimbra delivers powerful, thought-provoking keynotes that combine deep industry knowledge with compelling storytelling. His presentations leave audiences with actionable insights and a renewed sense of purpose.",
       topics: [
         {
           title: "Digital Transformation & Platform Strategy",
@@ -261,7 +261,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "Keynote Speaking",
           description:
-            "Engaging, high-impact presentations tailored to your audience. From corporate events to industry conferences, Luis delivers insights that inspire action and drive change.",
+            "Engaging, high-impact presentations tailored to your audience. From corporate events to industry conferences, Coimbra delivers insights that inspire action and drive change.",
         },
         {
           title: "Strategic Advisory",
@@ -283,7 +283,7 @@ export const translations: Record<Locale, Translations> = {
     testimonial: {
       label: "Testimonial",
       titleLine1: "What Leaders",
-      titleHighlight: "Say About Luis",
+      titleHighlight: "Say About Coimbra",
       quote:
         "A great professional. Dedicated, zealous about his projects, a fighter from start to finish, with technical knowledge rarely found. In technology, systems, innovation, and operations, there are few people in Brazil like Luis Coimbra. A builder of great projects, a tireless researcher who brought many innovations and was creative and decisive at critical moments. He is someone you want on winning teams.",
       author: "João Luís de Almeida Machado",
@@ -425,7 +425,7 @@ export const translations: Record<Locale, Translations> = {
       titleLine1: "Inspirando Audiências",
       titleHighlight: "Ao Redor do Mundo",
       description:
-        "Luis apresenta palestras poderosas e instigantes que combinam profundo conhecimento da indústria com narrativas envolventes. Suas apresentações deixam o público com insights acionáveis e um senso renovado de propósito.",
+        "Coimbra apresenta palestras poderosas e instigantes que combinam profundo conhecimento da indústria com narrativas envolventes. Suas apresentações deixam o público com insights acionáveis e um senso renovado de propósito.",
       topics: [
         {
           title: "Transformação Digital & Estratégia de Plataformas",
@@ -462,7 +462,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "Palestras",
           description:
-            "Apresentações envolventes e de alto impacto, adaptadas ao seu público. De eventos corporativos a conferências do setor, Luis entrega insights que inspiram ação e impulsionam mudanças.",
+            "Apresentações envolventes e de alto impacto, adaptadas ao seu público. De eventos corporativos a conferências do setor, Coimbra entrega insights que inspiram ação e impulsionam mudanças.",
         },
         {
           title: "Consultoria Estratégica",
@@ -484,7 +484,7 @@ export const translations: Record<Locale, Translations> = {
     testimonial: {
       label: "Depoimento",
       titleLine1: "O Que Líderes",
-      titleHighlight: "Dizem Sobre Luis",
+      titleHighlight: "Dizem Sobre Coimbra",
       quote:
         "Um grande profissional. Dedicado, zeloso por seus projetos, lutador do início ao fim, com conhecimento técnico que poucas vezes pude verificar em pessoas da área. Em tecnologias, sistemas, inovação e toda parte operacional há poucas pessoas no Brasil como o Luís Coimbra. Realizador de grandes projetos, pesquisador incansável, trouxe muitas inovações e foi criativo e decisivo em momentos importantes. É alguém para se ter em times vencedores.",
       author: "João Luís de Almeida Machado",
