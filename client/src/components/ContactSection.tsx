@@ -33,7 +33,7 @@ export default function ContactSection() {
       `Name: ${formData.name}\nEmail: ${formData.email}\nOrganization: ${formData.organization}\nEvent Type: ${formData.eventType}\nPreferred Date: ${formData.eventDate}\n\nMessage:\n${formData.message}`
     );
     window.open(
-      `mailto:contact@coimbra.eng.br?subject=${subject}&body=${body}`,
+      `mailto:info@coimbra.eng.br?subject=${subject}&body=${body}`,
       "_blank"
     );
     toast.success("Opening your email client to send the request.");
@@ -90,7 +90,7 @@ export default function ContactSection() {
                   <Mail className="w-4 h-4 text-navy/60" />
                 </div>
                 <div>
-                  <p className="font-body text-sm font-medium text-navy">contact@coimbra.eng.br</p>
+                  <p className="font-body text-sm font-medium text-navy">info@coimbra.eng.br</p>
                   <p className="font-body text-xs text-navy/50">For inquiries and proposals</p>
                 </div>
               </div>
