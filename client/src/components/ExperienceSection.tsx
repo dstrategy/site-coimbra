@@ -140,17 +140,25 @@ export default function ExperienceSection() {
                 <GraduationCap className="w-5 h-5 text-amber" />
                 Education
               </h3>
-              <div className="p-6 bg-white/5 rounded-sm border border-white/10">
-                <h4 className="font-display text-xl font-semibold text-white mb-1">
-                  Instituto Tecnol&oacute;gico de Aeron&aacute;utica (ITA)
-                </h4>
-                <p className="font-body text-sm text-white/60 mb-2">
-                  Engineering Degree &middot; Class of 1992
-                </p>
-                <p className="font-body text-sm text-white/45 leading-relaxed">
-                  One of Brazil's most prestigious engineering institutions, known for producing
-                  top-tier leaders in technology and aerospace.
-                </p>
+              <div className="space-y-4">
+                <div className="p-6 bg-white/5 rounded-sm border border-white/10">
+                  <h4 className="font-display text-xl font-semibold text-white mb-1">
+                    Aeronautics Institute of Technology (ITA)
+                  </h4>
+                  <p className="font-body text-sm text-white/45 leading-relaxed">
+                    One of Brazil's most prestigious engineering institutions, known for producing
+                    top-tier leaders in technology and aerospace.
+                  </p>
+                </div>
+                <div className="p-6 bg-white/5 rounded-sm border border-white/10">
+                  <h4 className="font-display text-xl font-semibold text-white mb-1">
+                    University of São Paulo (USP)
+                  </h4>
+                  <p className="font-body text-sm text-white/45 leading-relaxed">
+                    The largest and most renowned university in Latin America, consistently ranked
+                    among the top institutions in the world.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
