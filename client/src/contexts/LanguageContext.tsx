@@ -13,9 +13,6 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 function detectBrowserLocale(): Locale {
   const stored = localStorage.getItem("locale");
   if (stored === "en" || stored === "pt") return stored;
-
-  const browserLang = navigator.language || (navigator as any).userLanguage || "en";
-  if (browserLang.startsWith("pt")) return "pt";
   return "en";
 }
 
