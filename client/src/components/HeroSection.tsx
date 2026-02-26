@@ -21,12 +21,12 @@ export default function HeroSection() {
         <img
           src={HERO_IMAGE}
           alt="Luis Coimbra delivering a keynote speech at a major technology conference with a large audience"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[70%_center] md:object-center"
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1b2d]/85 via-[#0f1b2d]/60 to-[#0f1b2d]/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b2d]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1b2d]/90 via-[#0f1b2d]/70 to-[#0f1b2d]/40 md:from-[#0f1b2d]/85 md:via-[#0f1b2d]/60 md:to-[#0f1b2d]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b2d]/60 to-transparent md:from-[#0f1b2d]/50" />
       </div>
 
       {/* Content */}
