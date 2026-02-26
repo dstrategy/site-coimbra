@@ -169,7 +169,7 @@ export const translations: Record<Locale, Translations> = {
       jobs: [
         {
           period: "Present",
-          title: "CEO — Austin, TX",
+          title: "CEO — Austin, TX - USA",
           company: "DSTRATEGY LLC",
           description:
             "Leading the executive management of Marketing, Sales, and Support teams focused on bringing Brazilian SaaS solutions to the Texas market. DSTRATEGY specializes in internationalizing SaaS products — helping founders standardize their offerings, build scalable go-to-market strategies, and establish operations in the US with pricing, sales playbooks, channel partnerships, and cultural adaptation for sustainable growth.",
@@ -370,7 +370,7 @@ export const translations: Record<Locale, Translations> = {
       jobs: [
         {
           period: "Atual",
-          title: "CEO — Austin, TX",
+          title: "CEO — Austin, TX - USA",
           company: "DSTRATEGY LLC",
           description:
             "Liderando a gestão executiva dos times de Marketing, Vendas e Suporte focados em trazer soluções SaaS brasileiras para o mercado do Texas. A DSTRATEGY é especializada na internacionalização de produtos SaaS — ajudando fundadores a padronizar suas ofertas, construir estratégias de go-to-market escaláveis e estabelecer operações nos EUA com precificação, playbooks de vendas, parcerias de canal e adaptação cultural para crescimento sustentável.",
