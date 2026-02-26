@@ -169,10 +169,10 @@ export const translations: Record<Locale, Translations> = {
       jobs: [
         {
           period: "Present",
-          title: "Founder & Strategic Advisor",
+          title: "CEO — Austin, TX",
           company: "DSTRATEGY LLC",
           description:
-            "Leading strategic advisory services for CEOs and boards of directors, specializing in digital transformation, platform strategy, and innovation leadership across multiple industries.",
+            "Leading the executive management of Marketing, Sales, and Support teams focused on bringing Brazilian SaaS solutions to the Texas market. DSTRATEGY specializes in internationalizing SaaS products — helping founders standardize their offerings, build scalable go-to-market strategies, and establish operations in the US with pricing, sales playbooks, channel partnerships, and cultural adaptation for sustainable growth.",
         },
         {
           period: "Education & Technology",
@@ -370,10 +370,10 @@ export const translations: Record<Locale, Translations> = {
       jobs: [
         {
           period: "Atual",
-          title: "Fundador & Conselheiro Estratégico",
+          title: "CEO — Austin, TX",
           company: "DSTRATEGY LLC",
           description:
-            "Liderando serviços de consultoria estratégica para CEOs e conselhos de administração, com especialização em transformação digital, estratégia de plataformas e liderança em inovação em múltiplas indústrias.",
+            "Liderando a gestão executiva dos times de Marketing, Vendas e Suporte focados em trazer soluções SaaS brasileiras para o mercado do Texas. A DSTRATEGY é especializada na internacionalização de produtos SaaS — ajudando fundadores a padronizar suas ofertas, construir estratégias de go-to-market escaláveis e estabelecer operações nos EUA com precificação, playbooks de vendas, parcerias de canal e adaptação cultural para crescimento sustentável.",
         },
         {
           period: "Educação & Tecnologia",
