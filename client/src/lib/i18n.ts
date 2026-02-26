@@ -45,6 +45,7 @@ export interface Translations {
       companyUrl?: string;
       companyLinks?: Array<{ name: string; url: string }>;
       description: string;
+      descriptionLink?: { text: string; url: string };
     }>;
     schools: Array<{
       name: string;
@@ -196,7 +197,8 @@ export const translations: Record<Locale, Translations> = {
             { name: "Poliedro Educação", url: "https://poliedroeducacao.com.br" },
           ],
           description:
-            "Drove technology and innovation strategies at Brazil's leading educational institutions. Recognized as CIO of the Year in Education by IDC and Computerworld (IT Leaders 2015).",
+            "Drove technology and innovation strategies at Brazil's leading educational institutions. Led the creation of the Backbone Educacional — a cloud-based academic management platform built on Microsoft Azure — as one of the 5 transformation blocks of the MIT digital strategy, unifying all academic, financial, and administrative processes across the group. Recognized as CIO of the Year in Education by IDC and Computerworld (IT Leaders 2015).",
+          descriptionLink: { text: "Backbone Educacional", url: "https://news.microsoft.com/es-xl/features/cogna-educacao-creates-microsofts-cloud-based-academic-management-platform/" },
         },
       ],
       schools: [
@@ -405,7 +407,8 @@ export const translations: Record<Locale, Translations> = {
             { name: "Poliedro Educação", url: "https://poliedroeducacao.com.br" },
           ],
           description:
-            "Conduziu estratégias de tecnologia e inovação nas principais instituições educacionais do Brasil. Reconhecido como CIO do Ano em Educação pela IDC e Computerworld (IT Leaders 2015).",
+            "Conduziu estratégias de tecnologia e inovação nas principais instituições educacionais do Brasil. Liderou a criação do Backbone Educacional — uma plataforma de gestão acadêmica na nuvem construída sobre Microsoft Azure — como um dos 5 blocos de transformação da estratégia digital do MIT, unificando todos os processos acadêmicos, financeiros e administrativos do grupo. Reconhecido como CIO do Ano em Educação pela IDC e Computerworld (IT Leaders 2015).",
+          descriptionLink: { text: "Backbone Educacional", url: "https://news.microsoft.com/es-xl/features/cogna-educacao-creates-microsofts-cloud-based-academic-management-platform/" },
         },
       ],
       schools: [

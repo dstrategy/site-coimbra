@@ -96,7 +96,27 @@ export default function ExperienceSection() {
                     )}
                   </p>
                   <p className="font-body text-sm text-white/50 leading-relaxed">
-                    {item.description}
+                    {item.descriptionLink ? (
+                      <>
+                        {item.description.split(item.descriptionLink.text).map((part, j, arr) => (
+                          <span key={j}>
+                            {part}
+                            {j < arr.length - 1 && (
+                              <a
+                                href={item.descriptionLink!.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-amber hover:text-amber-light underline decoration-amber/40 hover:decoration-amber transition-colors duration-300"
+                              >
+                                {item.descriptionLink!.text}
+                              </a>
+                            )}
+                          </span>
+                        ))}
+                      </>
+                    ) : (
+                      item.description
+                    )}
                   </p>
                 </motion.div>
               ))}
