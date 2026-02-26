@@ -15,7 +15,7 @@ const PROFILE_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_
 const stats = [
   { number: "30+", label: "Years of Experience" },
   { number: "500+", label: "Keynote Speeches" },
-  { number: "100+", label: "Organizations Advised" },
+  { number: "10+", label: "Organizations Advised" },
   { number: "6K+", label: "LinkedIn Followers" },
 ];
 
