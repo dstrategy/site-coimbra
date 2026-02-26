@@ -176,7 +176,7 @@ export const translations: Record<Locale, Translations> = {
         },
         {
           period: "Consulting",
-          title: "COO — São Paulo, SP, Brazil",
+          title: "COO — São Paulo, SP - Brazil",
           company: "Design Strategy Treinamentos e Consultoria LTDA",
           description:
             "Partnering with organizations to transform strategies into tangible results through agile methodologies and multidisciplinary teams. Bridging executive advisory with hands-on implementation.",
@@ -377,7 +377,7 @@ export const translations: Record<Locale, Translations> = {
         },
         {
           period: "Consultoria",
-          title: "COO — São Paulo, SP, Brasil",
+          title: "COO — São Paulo, SP - Brasil",
           company: "Design Strategy Treinamentos e Consultoria LTDA",
           description:
             "Parceria com organizações para transformar estratégias em resultados tangíveis através de metodologias ágeis e equipes multidisciplinares. Ponte entre consultoria executiva e implementação prática.",
