@@ -189,11 +189,10 @@ export const translations: Record<Locale, Translations> = {
         {
           period: "Education & Technology",
           title: "C-Level Executive & CIO",
-          company: "Cogna Educação / Somos Educação / Kroton Educacional / Poliedro Educação",
+          company: "Cogna Educação / Somos Educação / Poliedro Educação",
           companyLinks: [
             { name: "Cogna Educação", url: "https://cogna.com.br" },
             { name: "Somos Educação", url: "https://somoseducacao.com.br" },
-            { name: "Kroton Educacional", url: "https://kroton.com.br" },
             { name: "Poliedro Educação", url: "https://poliedroeducacao.com.br" },
           ],
           description:
@@ -399,11 +398,10 @@ export const translations: Record<Locale, Translations> = {
         {
           period: "Educação & Tecnologia",
           title: "Executivo C-Level & CIO",
-          company: "Cogna Educação / Somos Educação / Kroton Educacional / Poliedro Educação",
+          company: "Cogna Educação / Somos Educação / Poliedro Educação",
           companyLinks: [
             { name: "Cogna Educação", url: "https://cogna.com.br" },
             { name: "Somos Educação", url: "https://somoseducacao.com.br" },
-            { name: "Kroton Educacional", url: "https://kroton.com.br" },
             { name: "Poliedro Educação", url: "https://poliedroeducacao.com.br" },
           ],
           description:
