@@ -10,7 +10,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const PROFILE_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/qAZznJVqDIUfHpfW.png";
+const PROFILE_IMAGE = "/images/profile-hero.jpg";
 
 export default function AboutSection() {
   const ref = useRef(null);

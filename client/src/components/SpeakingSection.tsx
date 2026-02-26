@@ -11,9 +11,9 @@ import { useRef } from "react";
 import { Mic, Users, Globe, Lightbulb } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const SPEAKING_1 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/VorIyyzNumqOnVCJ.png";
-const SPEAKING_2 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/RNeWDkwbfnWPAbLe.png";
-const SPEAKING_4 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/eHRRuTVyhOCyLnQE.png";
+const SPEAKING_1 = "/images/speaking-1.jpg";
+const SPEAKING_2 = "/images/speaking-2.jpg";
+const SPEAKING_4 = "/images/speaking-4.jpg";
 
 const topicIcons = [Lightbulb, Globe, Users, Mic];
 

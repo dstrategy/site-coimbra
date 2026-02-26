@@ -9,7 +9,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const HERO_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/rqleytCdDTcbQCVZ.png";
+const HERO_IMAGE = "/images/speaking-1.jpg";
 
 export default function HeroSection() {
   const { t } = useLanguage();
