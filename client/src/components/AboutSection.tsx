@@ -57,8 +57,9 @@ export default function AboutSection() {
               <div className="aspect-[3/4] overflow-hidden rounded-sm">
                 <img
                   src={PROFILE_IMAGE}
-                  alt="Luis Coimbra professional portrait"
+                  alt="Luis Coimbra - Strategic Advisor, Keynote Speaker, and Board Member"
                   className="w-full h-full object-cover object-top"
+                  loading="lazy"
                 />
               </div>
               {/* Decorative amber line */}

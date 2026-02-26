@@ -111,6 +111,7 @@ export default function ContactSection() {
               href="https://www.linkedin.com/in/luiscoimbra/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Connect with Luis Coimbra on LinkedIn"
               className="inline-flex items-center gap-3 px-6 py-3 bg-[#0a66c2] text-white font-body text-sm font-medium rounded-sm hover:bg-[#004182] transition-colors duration-300"
             >
               <Linkedin className="w-4 h-4" />
@@ -125,19 +126,21 @@ export default function ContactSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="lg:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="p-8 md:p-10 bg-white rounded-sm border border-navy/5 shadow-[0_4px_20px_rgba(15,27,45,0.04)]">
+            <form onSubmit={handleSubmit} aria-label="Book a keynote speaking engagement with Luis Coimbra" className="p-8 md:p-10 bg-white rounded-sm border border-navy/5 shadow-[0_4px_20px_rgba(15,27,45,0.04)]">
               <h3 className="font-display text-2xl font-semibold text-navy mb-6">
                 Book a Keynote
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
+                  <label htmlFor="contact-name" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
                     Full Name *
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     required
+                    autoComplete="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all"
@@ -145,12 +148,14 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
+                  <label htmlFor="contact-email" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
                     Email *
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
                     required
+                    autoComplete="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all"
@@ -161,12 +166,14 @@ export default function ContactSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
+                  <label htmlFor="contact-org" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
                     Organization *
                   </label>
                   <input
+                    id="contact-org"
                     type="text"
                     required
+                    autoComplete="organization"
                     value={formData.organization}
                     onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                     className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all"
@@ -174,10 +181,11 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
+                  <label htmlFor="contact-event-type" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
                     Event Type
                   </label>
                   <select
+                    id="contact-event-type"
                     value={formData.eventType}
                     onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
                     className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all"
@@ -194,10 +202,11 @@ export default function ContactSection() {
               </div>
 
               <div className="mb-4">
-                <label className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
+                <label htmlFor="contact-date" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
                   Preferred Date
                 </label>
                 <input
+                  id="contact-date"
                   type="date"
                   value={formData.eventDate}
                   onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
@@ -206,10 +215,11 @@ export default function ContactSection() {
               </div>
 
               <div className="mb-6">
-                <label className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
+                <label htmlFor="contact-message" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
                   Message *
                 </label>
                 <textarea
+                  id="contact-message"
                   required
                   rows={4}
                   value={formData.message}

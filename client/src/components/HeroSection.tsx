@@ -12,13 +12,15 @@ const HERO_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_fil
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-start overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-start overflow-hidden" role="banner" aria-label="Hero section - Luis Coimbra, Strategic Advisor and Keynote Speaker">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={HERO_IMAGE}
-          alt="Luis Coimbra delivering a keynote speech"
+          alt="Luis Coimbra delivering a keynote speech at a major technology conference with a large audience"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f1b2d]/85 via-[#0f1b2d]/60 to-[#0f1b2d]/30" />
