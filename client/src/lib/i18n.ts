@@ -177,7 +177,7 @@ export const translations: Record<Locale, Translations> = {
         {
           period: "Education & Technology",
           title: "C-Level Executive & CIO",
-          company: "Poliedro Educação / Bernoulli Educação / Kroton",
+          company: "Poliedro Educação / Kroton Educacional / Cogna Educação / Somos Educação",
           description:
             "Drove technology and innovation strategies at Brazil's leading educational institutions. Recognized as CIO of the Year in Education by IDC and Computerworld (IT Leaders 2015).",
         },
@@ -378,7 +378,7 @@ export const translations: Record<Locale, Translations> = {
         {
           period: "Educação & Tecnologia",
           title: "Executivo C-Level & CIO",
-          company: "Poliedro Educação / Bernoulli Educação / Kroton",
+          company: "Poliedro Educação / Kroton Educacional / Cogna Educação / Somos Educação",
           description:
             "Conduziu estratégias de tecnologia e inovação nas principais instituições educacionais do Brasil. Reconhecido como CIO do Ano em Educação pela IDC e Computerworld (IT Leaders 2015).",
         },

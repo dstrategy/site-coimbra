@@ -19,7 +19,7 @@ export default function AboutSection() {
 
   const stats = [
     { number: "30+", label: t.about.stats.years },
-    { number: "500+", label: t.about.stats.speeches },
+    { number: "90+", label: t.about.stats.speeches },
     { number: "10+", label: t.about.stats.organizations },
     { number: "6K+", label: t.about.stats.followers },
   ];
