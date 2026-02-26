@@ -8,7 +8,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Award, GraduationCap, Briefcase, Shield } from "lucide-react";
+import { Award, GraduationCap, Briefcase } from "lucide-react";
 
 const experience = [
   {
@@ -35,11 +35,6 @@ const experience = [
       "Partnering with organizations to transform strategies into tangible results through agile methodologies and multidisciplinary teams. Bridging executive advisory with hands-on implementation.",
     type: "work",
   },
-];
-
-const certifications = [
-  { name: "SAFe 4 Certified Agilist", issuer: "Scaled Agile, Inc.", year: "2018" },
-  { name: "ACAMS Certified AML Specialist", issuer: "ACAMS", year: "Recent" },
 ];
 
 const awards = [
@@ -159,29 +154,6 @@ export default function ExperienceSection() {
                     among the top institutions in the world.
                   </p>
                 </div>
-              </div>
-            </motion.div>
-
-            {/* Certifications */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="mb-12"
-            >
-              <h3 className="font-display text-2xl font-semibold text-white mb-8 flex items-center gap-3">
-                <Shield className="w-5 h-5 text-amber" />
-                Certifications
-              </h3>
-              <div className="space-y-4">
-                {certifications.map((cert, i) => (
-                  <div key={i} className="p-4 bg-white/5 rounded-sm border border-white/10">
-                    <p className="font-body text-sm font-semibold text-white">{cert.name}</p>
-                    <p className="font-body text-xs text-white/50 mt-1">
-                      {cert.issuer} &middot; {cert.year}
-                    </p>
-                  </div>
-                ))}
               </div>
             </motion.div>
 
