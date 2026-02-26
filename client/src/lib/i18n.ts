@@ -42,6 +42,8 @@ export interface Translations {
       period: string;
       title: string;
       company: string;
+      companyUrl?: string;
+      companyLinks?: Array<{ name: string; url: string }>;
       description: string;
     }>;
     schools: Array<{
@@ -171,6 +173,7 @@ export const translations: Record<Locale, Translations> = {
           period: "Present",
           title: "CEO — Austin, TX - USA",
           company: "DSTRATEGY LLC",
+          companyUrl: "https://dstrategy.llc",
           description:
             "Leading the executive management of Marketing, Sales, and Support teams focused on bringing Brazilian SaaS solutions to the Texas market. DSTRATEGY specializes in internationalizing SaaS products — helping founders standardize their offerings, build scalable go-to-market strategies, and establish operations in the US with pricing, sales playbooks, channel partnerships, and cultural adaptation for sustainable growth.",
         },
@@ -178,6 +181,7 @@ export const translations: Record<Locale, Translations> = {
           period: "Consulting",
           title: "COO — São Paulo, SP - Brazil",
           company: "Design Strategy Treinamentos e Consultoria LTDA",
+          companyUrl: "https://designstrategy.com.br",
           description:
             "Partnering with organizations to transform strategies into tangible results through agile methodologies and multidisciplinary teams. Bridging executive advisory with hands-on implementation.",
         },
@@ -185,6 +189,12 @@ export const translations: Record<Locale, Translations> = {
           period: "Education & Technology",
           title: "C-Level Executive & CIO",
           company: "Cogna Educação / Somos Educação / Kroton Educacional / Poliedro Educação",
+          companyLinks: [
+            { name: "Cogna Educação", url: "https://cogna.com.br" },
+            { name: "Somos Educação", url: "https://somoseducacao.com.br" },
+            { name: "Kroton Educacional", url: "https://kroton.com.br" },
+            { name: "Poliedro Educação", url: "https://poliedroeducacao.com.br" },
+          ],
           description:
             "Drove technology and innovation strategies at Brazil's leading educational institutions. Recognized as CIO of the Year in Education by IDC and Computerworld (IT Leaders 2015).",
         },
@@ -372,6 +382,7 @@ export const translations: Record<Locale, Translations> = {
           period: "Atual",
           title: "CEO — Austin, TX - USA",
           company: "DSTRATEGY LLC",
+          companyUrl: "https://dstrategy.llc",
           description:
             "Liderando a gestão executiva dos times de Marketing, Vendas e Suporte focados em trazer soluções SaaS brasileiras para o mercado do Texas. A DSTRATEGY é especializada na internacionalização de produtos SaaS — ajudando fundadores a padronizar suas ofertas, construir estratégias de go-to-market escaláveis e estabelecer operações nos EUA com precificação, playbooks de vendas, parcerias de canal e adaptação cultural para crescimento sustentável.",
         },
@@ -379,6 +390,7 @@ export const translations: Record<Locale, Translations> = {
           period: "Consultoria",
           title: "COO — São Paulo, SP - Brasil",
           company: "Design Strategy Treinamentos e Consultoria LTDA",
+          companyUrl: "https://designstrategy.com.br",
           description:
             "Parceria com organizações para transformar estratégias em resultados tangíveis através de metodologias ágeis e equipes multidisciplinares. Ponte entre consultoria executiva e implementação prática.",
         },
@@ -386,6 +398,12 @@ export const translations: Record<Locale, Translations> = {
           period: "Educação & Tecnologia",
           title: "Executivo C-Level & CIO",
           company: "Cogna Educação / Somos Educação / Kroton Educacional / Poliedro Educação",
+          companyLinks: [
+            { name: "Cogna Educação", url: "https://cogna.com.br" },
+            { name: "Somos Educação", url: "https://somoseducacao.com.br" },
+            { name: "Kroton Educacional", url: "https://kroton.com.br" },
+            { name: "Poliedro Educação", url: "https://poliedroeducacao.com.br" },
+          ],
           description:
             "Conduziu estratégias de tecnologia e inovação nas principais instituições educacionais do Brasil. Reconhecido como CIO do Ano em Educação pela IDC e Computerworld (IT Leaders 2015).",
         },

@@ -68,7 +68,32 @@ export default function ExperienceSection() {
                     {item.title}
                   </h4>
                   <p className="font-body text-sm font-medium text-white/60 mb-3">
-                    {item.company}
+                    {item.companyLinks ? (
+                      item.companyLinks.map((link, j) => (
+                        <span key={j}>
+                          {j > 0 && <span> / </span>}
+                          <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-amber transition-colors duration-300 underline decoration-white/20 hover:decoration-amber"
+                          >
+                            {link.name}
+                          </a>
+                        </span>
+                      ))
+                    ) : item.companyUrl ? (
+                      <a
+                        href={item.companyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-amber transition-colors duration-300 underline decoration-white/20 hover:decoration-amber"
+                      >
+                        {item.company}
+                      </a>
+                    ) : (
+                      item.company
+                    )}
                   </p>
                   <p className="font-body text-sm text-white/50 leading-relaxed">
                     {item.description}
