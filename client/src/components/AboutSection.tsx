@@ -81,14 +81,6 @@ export default function AboutSection() {
               transformation.
             </p>
 
-            <p className="font-body text-base md:text-lg text-navy/70 leading-relaxed mb-6">
-              A graduate of the prestigious <strong className="text-navy font-semibold">Instituto Tecnol&oacute;gico de Aeron&aacute;utica (ITA)</strong>,
-              Luis has built a distinguished career leading initiatives in technology, education,
-              innovation, and strategic consulting. His experience spans from executing complex
-              cloud and DevSecOps programs to creating innovative and scalable business models.
-              Across all these fronts, his focus is clear: generating real, lasting, and measurable value.
-            </p>
-
             <p className="font-body text-base md:text-lg text-navy/70 leading-relaxed mb-10">
               More than a visionary executive, Luis is a natural communicator. As a keynote speaker
               and mentor, he is dedicated to sharing experiences with leaders, entrepreneurs,
