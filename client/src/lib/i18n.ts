@@ -285,9 +285,9 @@ export const translations: Record<Locale, Translations> = {
       titleLine1: "What Leaders",
       titleHighlight: "Say About Luis",
       quote:
-        "Luis is a visionary leader who combines strategic thinking with hands-on execution. His ability to inspire teams and drive innovation is unmatched. Working with him transformed how our organization approaches technology and business strategy.",
-      author: "Nicolau Camargo",
-      role: "Executive Director, Bernoulli Educação",
+        "A great professional. Dedicated, zealous about his projects, a fighter from start to finish, with technical knowledge rarely found. In technology, systems, innovation, and operations, there are few people in Brazil like Luis Coimbra. A builder of great projects, a tireless researcher who brought many innovations and was creative and decisive at critical moments. He is someone you want on winning teams.",
+      author: "João Luís de Almeida Machado",
+      role: "LinkedIn Recommendation",
     },
     contact: {
       label: "Contact",
@@ -486,9 +486,9 @@ export const translations: Record<Locale, Translations> = {
       titleLine1: "O Que Líderes",
       titleHighlight: "Dizem Sobre Luis",
       quote:
-        "Luis é um líder visionário que combina pensamento estratégico com execução prática. Sua capacidade de inspirar equipes e impulsionar inovação é incomparável. Trabalhar com ele transformou a forma como nossa organização aborda tecnologia e estratégia de negócios.",
-      author: "Nicolau Camargo",
-      role: "Diretor Executivo, Bernoulli Educação",
+        "Um grande profissional. Dedicado, zeloso por seus projetos, lutador do início ao fim, com conhecimento técnico que poucas vezes pude verificar em pessoas da área. Em tecnologias, sistemas, inovação e toda parte operacional há poucas pessoas no Brasil como o Luís Coimbra. Realizador de grandes projetos, pesquisador incansável, trouxe muitas inovações e foi criativo e decisivo em momentos importantes. É alguém para se ter em times vencedores.",
+      author: "João Luís de Almeida Machado",
+      role: "Recomendação LinkedIn",
     },
     contact: {
       label: "Contato",
