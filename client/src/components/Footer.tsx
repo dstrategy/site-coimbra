@@ -6,9 +6,11 @@
 */
 
 import { Linkedin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-navy py-12">
@@ -20,7 +22,7 @@ export default function Footer() {
               Luis Coimbra
             </p>
             <p className="font-body text-xs text-white/40 mt-1">
-              Strategic Advisor &middot; Keynote Speaker
+              {t.hero.tagline}
             </p>
           </div>
 
@@ -47,7 +49,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="font-body text-xs text-white/30">
-            &copy; {currentYear} Luis Coimbra. All rights reserved.
+            &copy; {currentYear} Luis Coimbra. {t.footer.rights}
           </p>
         </div>
       </div>

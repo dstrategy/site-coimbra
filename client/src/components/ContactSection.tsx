@@ -10,10 +10,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Linkedin, Mail, MapPin, Send, Calendar } from "lucide-react";
 import { toast } from "sonner";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,7 +27,6 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Build mailto link with form data
     const subject = encodeURIComponent(
       `Speaking Engagement Request from ${formData.name} — ${formData.organization}`
     );
@@ -36,7 +37,7 @@ export default function ContactSection() {
       `mailto:info@coimbra.eng.br?subject=${subject}&body=${body}`,
       "_blank"
     );
-    toast.success("Opening your email client to send the request.");
+    toast.success(t.contact.emailOpening);
   };
 
   return (
@@ -50,12 +51,12 @@ export default function ContactSection() {
           className="mb-16"
         >
           <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-amber-dark mb-3">
-            Contact
+            {t.contact.label}
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight">
-            Let's Create
+            {t.contact.titleLine1}
             <br />
-            <span className="text-amber-dark">Something Impactful</span>
+            <span className="text-amber-dark">{t.contact.titleHighlight}</span>
           </h2>
         </motion.div>
 
@@ -68,10 +69,7 @@ export default function ContactSection() {
             className="lg:col-span-2"
           >
             <p className="font-body text-lg text-navy/70 leading-relaxed mb-8">
-              Whether your company, event, or team needs an experienced, provocative, and practical
-              voice — someone who speaks the language of business, people, and transformation —
-              Luis Coimbra is ready to contribute. On stage, in a boardroom, or in executive
-              mentoring, he delivers clarity, direction, and impact.
+              {t.contact.description}
             </p>
 
             <div className="space-y-6 mb-10">
@@ -80,8 +78,8 @@ export default function ContactSection() {
                   <MapPin className="w-4 h-4 text-navy/60" />
                 </div>
                 <div>
-                  <p className="font-body text-sm font-medium text-navy">United States</p>
-                  <p className="font-body text-xs text-navy/50">Available worldwide</p>
+                  <p className="font-body text-sm font-medium text-navy">{t.contact.location}</p>
+                  <p className="font-body text-xs text-navy/50">{t.contact.locationSub}</p>
                 </div>
               </div>
 
@@ -90,8 +88,8 @@ export default function ContactSection() {
                   <Mail className="w-4 h-4 text-navy/60" />
                 </div>
                 <div>
-                  <p className="font-body text-sm font-medium text-navy">info@coimbra.eng.br</p>
-                  <p className="font-body text-xs text-navy/50">For inquiries and proposals</p>
+                  <p className="font-body text-sm font-medium text-navy">{t.contact.email}</p>
+                  <p className="font-body text-xs text-navy/50">{t.contact.emailSub}</p>
                 </div>
               </div>
 
@@ -100,8 +98,8 @@ export default function ContactSection() {
                   <Calendar className="w-4 h-4 text-navy/60" />
                 </div>
                 <div>
-                  <p className="font-body text-sm font-medium text-navy">Flexible Scheduling</p>
-                  <p className="font-body text-xs text-navy/50">In-person & virtual events</p>
+                  <p className="font-body text-sm font-medium text-navy">{t.contact.scheduling}</p>
+                  <p className="font-body text-xs text-navy/50">{t.contact.schedulingSub}</p>
                 </div>
               </div>
             </div>
@@ -115,7 +113,7 @@ export default function ContactSection() {
               className="inline-flex items-center gap-3 px-6 py-3 bg-[#0a66c2] text-white font-body text-sm font-medium rounded-sm hover:bg-[#004182] transition-colors duration-300"
             >
               <Linkedin className="w-4 h-4" />
-              Connect on LinkedIn
+              {t.contact.connectLinkedIn}
             </a>
           </motion.div>
 
@@ -128,13 +126,13 @@ export default function ContactSection() {
           >
             <form onSubmit={handleSubmit} aria-label="Book a keynote speaking engagement with Luis Coimbra" className="p-8 md:p-10 bg-white rounded-sm border border-navy/5 shadow-[0_4px_20px_rgba(15,27,45,0.04)]">
               <h3 className="font-display text-2xl font-semibold text-navy mb-6">
-                Book a Keynote
+                {t.contact.formTitle}
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label htmlFor="contact-name" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
-                    Full Name *
+                    {t.contact.fullName}
                   </label>
                   <input
                     id="contact-name"
@@ -144,12 +142,12 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all"
-                    placeholder="Your name"
+                    placeholder={t.contact.namePlaceholder}
                   />
                 </div>
                 <div>
                   <label htmlFor="contact-email" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
-                    Email *
+                    {t.contact.emailLabel}
                   </label>
                   <input
                     id="contact-email"
@@ -159,7 +157,7 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all"
-                    placeholder="your@email.com"
+                    placeholder={t.contact.emailPlaceholder}
                   />
                 </div>
               </div>
@@ -167,7 +165,7 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label htmlFor="contact-org" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
-                    Organization *
+                    {t.contact.organization}
                   </label>
                   <input
                     id="contact-org"
@@ -177,12 +175,12 @@ export default function ContactSection() {
                     value={formData.organization}
                     onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                     className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all"
-                    placeholder="Company or organization"
+                    placeholder={t.contact.orgPlaceholder}
                   />
                 </div>
                 <div>
                   <label htmlFor="contact-event-type" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
-                    Event Type
+                    {t.contact.eventType}
                   </label>
                   <select
                     id="contact-event-type"
@@ -190,20 +188,20 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
                     className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all"
                   >
-                    <option value="">Select type</option>
-                    <option value="keynote">Keynote Speech</option>
-                    <option value="workshop">Workshop</option>
-                    <option value="panel">Panel Discussion</option>
-                    <option value="mentoring">Executive Mentoring</option>
-                    <option value="advisory">Strategic Advisory</option>
-                    <option value="other">Other</option>
+                    <option value="">{t.contact.selectType}</option>
+                    <option value="keynote">{t.contact.keynote}</option>
+                    <option value="workshop">{t.contact.workshop}</option>
+                    <option value="panel">{t.contact.panel}</option>
+                    <option value="mentoring">{t.contact.mentoring}</option>
+                    <option value="advisory">{t.contact.advisory}</option>
+                    <option value="other">{t.contact.other}</option>
                   </select>
                 </div>
               </div>
 
               <div className="mb-4">
                 <label htmlFor="contact-date" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
-                  Preferred Date
+                  {t.contact.preferredDate}
                 </label>
                 <input
                   id="contact-date"
@@ -216,7 +214,7 @@ export default function ContactSection() {
 
               <div className="mb-6">
                 <label htmlFor="contact-message" className="block font-body text-xs font-medium text-navy/60 mb-1.5 uppercase tracking-wider">
-                  Message *
+                  {t.contact.message}
                 </label>
                 <textarea
                   id="contact-message"
@@ -225,7 +223,7 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 bg-ivory border border-navy/10 rounded-sm font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber/30 transition-all resize-none"
-                  placeholder="Tell us about your event, audience, and what you're looking for..."
+                  placeholder={t.contact.messagePlaceholder}
                 />
               </div>
 
@@ -234,7 +232,7 @@ export default function ContactSection() {
                 className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-amber text-navy font-body text-sm font-semibold tracking-wide uppercase rounded-sm hover:bg-amber-light transition-all duration-300 hover:shadow-[0_4px_20px_rgba(212,168,83,0.4)]"
               >
                 <Send className="w-4 h-4" />
-                Send Request
+                {t.contact.sendRequest}
               </button>
             </form>
           </motion.div>

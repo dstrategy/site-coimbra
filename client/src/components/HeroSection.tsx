@@ -7,12 +7,15 @@
 */
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HERO_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/rqleytCdDTcbQCVZ.png";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+
   return (
-    <section className="relative min-h-screen flex items-center justify-start overflow-hidden" role="banner" aria-label="Hero section - Luis Coimbra, Strategic Advisor and Keynote Speaker">
+    <section className="relative min-h-screen flex items-center justify-start overflow-hidden" role="banner" aria-label="Hero section - Luis Coimbra">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -22,7 +25,6 @@ export default function HeroSection() {
           loading="eager"
           fetchPriority="high"
         />
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f1b2d]/85 via-[#0f1b2d]/60 to-[#0f1b2d]/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b2d]/50 to-transparent" />
       </div>
@@ -36,7 +38,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-body text-sm md:text-base font-medium tracking-[0.25em] uppercase text-amber-light mb-6"
           >
-            Strategic Advisor &middot; Keynote Speaker &middot; Board Member
+            {t.hero.tagline}
           </motion.p>
 
           <motion.h1
@@ -56,8 +58,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="font-body text-lg md:text-xl text-white/80 leading-relaxed max-w-lg mb-10"
           >
-            Bridging strategy, technology, and human insight to help organizations
-            thrive in an era of transformation.
+            {t.hero.subtitle}
           </motion.p>
 
           <motion.div
@@ -74,7 +75,7 @@ export default function HeroSection() {
               }}
               className="inline-flex items-center justify-center px-8 py-4 bg-amber text-navy font-body text-sm font-semibold tracking-wide uppercase rounded-sm hover:bg-amber-light transition-all duration-300 hover:shadow-[0_4px_20px_rgba(212,168,83,0.4)]"
             >
-              Book a Keynote
+              {t.hero.bookKeynote}
             </a>
             <a
               href="#about"
@@ -84,7 +85,7 @@ export default function HeroSection() {
               }}
               className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-body text-sm font-medium tracking-wide uppercase rounded-sm hover:bg-white/10 transition-all duration-300"
             >
-              Learn More
+              {t.hero.learnMore}
             </a>
           </motion.div>
         </div>

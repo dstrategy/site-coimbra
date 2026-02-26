@@ -8,10 +8,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Quote } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function TestimonialSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section className="relative py-24 md:py-32 bg-navy overflow-hidden">
@@ -29,21 +31,17 @@ export default function TestimonialSection() {
           <Quote className="w-12 h-12 text-amber/40 mx-auto mb-8" />
 
           <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-white/90 leading-relaxed mb-8 italic">
-            "A great professional. Dedicated, zealous about his projects, a fighter from start to
-            finish, with technical knowledge rarely found. In technology, systems, innovation, and
-            operations, there are few people in Brazil like Luis Coimbra. A builder of great
-            projects, a tireless researcher who brought many innovations and was creative and
-            decisive at critical moments. He is someone you want on winning teams."
+            "{t.testimonial.quote}"
           </blockquote>
 
           <div className="flex items-center justify-center gap-3">
             <div className="w-12 h-px bg-amber/40" />
             <div>
               <p className="font-body text-sm font-semibold text-white">
-                Jo&atilde;o Lu&iacute;s de Almeida Machado
+                {t.testimonial.author}
               </p>
               <p className="font-body text-xs text-white/50 mt-0.5">
-                LinkedIn Recommendation
+                {t.testimonial.role}
               </p>
             </div>
             <div className="w-12 h-px bg-amber/40" />

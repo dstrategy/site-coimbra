@@ -9,41 +9,24 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Mic, Users, Globe, Lightbulb } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const SPEAKING_1 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/VorIyyzNumqOnVCJ.png";
 const SPEAKING_2 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/RNeWDkwbfnWPAbLe.png";
 const SPEAKING_4 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663280816898/eHRRuTVyhOCyLnQE.png";
 
-const topics = [
-  {
-    icon: Lightbulb,
-    title: "Digital Transformation & Strategy",
-    description:
-      "How to navigate the digital landscape with clarity, turning disruption into competitive advantage for your organization.",
-  },
-  {
-    icon: Globe,
-    title: "Platform Ecosystems & Innovation",
-    description:
-      "Building scalable platform strategies that create new business opportunities and drive sustainable growth.",
-  },
-  {
-    icon: Users,
-    title: "Leadership in Times of Change",
-    description:
-      "Developing organizational cultures that embrace transformation while maintaining human-centered values.",
-  },
-  {
-    icon: Mic,
-    title: "Cloud, AI & Emerging Technologies",
-    description:
-      "Practical insights on leveraging cloud computing, artificial intelligence, and emerging tech for real business impact.",
-  },
-];
+const topicIcons = [Lightbulb, Globe, Users, Mic];
 
 export default function SpeakingSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
+
+  const images = [
+    { src: SPEAKING_1, alt: t.speaking.images[0]?.alt || "" },
+    { src: SPEAKING_2, alt: t.speaking.images[1]?.alt || "" },
+    { src: SPEAKING_4, alt: t.speaking.images[2]?.alt || "" },
+  ];
 
   return (
     <section id="speaking" className="relative py-24 md:py-32 bg-ivory grain-overlay">
@@ -56,27 +39,21 @@ export default function SpeakingSection() {
           className="mb-16"
         >
           <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-amber-dark mb-3">
-            Speaking
+            {t.speaking.label}
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight">
-            Inspiring Audiences
+            {t.speaking.titleLine1}
             <br />
-            <span className="text-amber-dark">Around the World</span>
+            <span className="text-amber-dark">{t.speaking.titleHighlight}</span>
           </h2>
           <p className="font-body text-lg text-navy/60 mt-6 max-w-2xl leading-relaxed">
-            Luis Coimbra's keynotes inspire and provoke simultaneously. His talks are anchored in
-            real-world experience, translated into insights that connect innovation, strategy,
-            execution, and humanity.
+            {t.speaking.description}
           </p>
         </motion.div>
 
         {/* Image Gallery */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
-          {[
-            { src: SPEAKING_1, alt: "Luis Coimbra at Digital Transformation conference" },
-            { src: SPEAKING_2, alt: "Luis Coimbra delivering Innovation Leadership keynote" },
-            { src: SPEAKING_4, alt: "Luis Coimbra at Cloud Computing & AI conference" },
-          ].map((img, i) => (
+          {images.map((img, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
@@ -108,29 +85,32 @@ export default function SpeakingSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {topics.map((topic, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 + i * 0.1 }}
-              className="group p-6 md:p-8 bg-white rounded-sm border border-navy/5 hover:shadow-[0_8px_30px_rgba(15,27,45,0.08)] transition-all duration-500"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-sm bg-amber/10 flex items-center justify-center group-hover:bg-amber/20 transition-colors duration-300">
-                  <topic.icon className="w-5 h-5 text-amber-dark" />
+          {t.speaking.topics.map((topic, i) => {
+            const Icon = topicIcons[i] || Mic;
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.5 + i * 0.1 }}
+                className="group p-6 md:p-8 bg-white rounded-sm border border-navy/5 hover:shadow-[0_8px_30px_rgba(15,27,45,0.08)] transition-all duration-500"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-sm bg-amber/10 flex items-center justify-center group-hover:bg-amber/20 transition-colors duration-300">
+                    <Icon className="w-5 h-5 text-amber-dark" />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-xl font-semibold text-navy mb-2">
+                      {topic.title}
+                    </h4>
+                    <p className="font-body text-sm text-navy/60 leading-relaxed">
+                      {topic.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-display text-xl font-semibold text-navy mb-2">
-                    {topic.title}
-                  </h4>
-                  <p className="font-body text-sm text-navy/60 leading-relaxed">
-                    {topic.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* CTA */}
@@ -149,7 +129,7 @@ export default function SpeakingSection() {
             className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-ivory font-body text-sm font-semibold tracking-wide uppercase rounded-sm hover:bg-navy-light transition-all duration-300"
           >
             <Mic className="w-4 h-4" />
-            Request a Speaking Engagement
+            {t.nav.bookKeynote}
           </a>
         </motion.div>
       </div>

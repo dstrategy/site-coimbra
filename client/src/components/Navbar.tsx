@@ -3,22 +3,26 @@
   - Transparent on top, transitions to frosted glass on scroll
   - Navy text, amber accent on active link
   - Cormorant Garamond for brand, Outfit for nav links
+  - Language toggle EN/PT
 */
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Speaking", href: "#speaking" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Globe } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { locale, t, toggleLocale } = useLanguage();
+
+  const navLinks = [
+    { label: t.nav.about, href: "#about" },
+    { label: t.nav.experience, href: "#experience" },
+    { label: t.nav.speaking, href: "#speaking" },
+    { label: t.nav.services, href: "#services" },
+    { label: t.nav.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,6 +79,21 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+
+          {/* Language Toggle */}
+          <button
+            onClick={toggleLocale}
+            aria-label={locale === "en" ? "Mudar para Português" : "Switch to English"}
+            className={`flex items-center gap-1.5 font-body text-xs font-semibold tracking-wider uppercase transition-colors duration-300 px-3 py-1.5 rounded-sm border ${
+              scrolled
+                ? "text-navy/60 hover:text-navy border-navy/15 hover:border-navy/30"
+                : "text-white/70 hover:text-white border-white/20 hover:border-white/40"
+            }`}
+          >
+            <Globe className="w-3.5 h-3.5" />
+            {locale === "en" ? "PT" : "EN"}
+          </button>
+
           <a
             href="#contact"
             onClick={(e) => {
@@ -83,7 +102,7 @@ export default function Navbar() {
             }}
             className={`ml-2 px-5 py-2.5 font-body text-sm font-medium tracking-wide rounded-sm transition-all duration-300 ${scrolled ? 'bg-navy text-ivory hover:bg-navy-light' : 'bg-amber text-navy hover:bg-amber-light'}`}
           >
-            Book a Keynote
+            {t.nav.bookKeynote}
           </a>
         </div>
 
@@ -132,6 +151,16 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+
+          {/* Mobile Language Toggle */}
+          <button
+            onClick={toggleLocale}
+            className="flex items-center gap-2 font-body text-base font-medium text-navy/80 hover:text-navy transition-colors py-2"
+          >
+            <Globe className="w-4 h-4" />
+            {locale === "en" ? "Português" : "English"}
+          </button>
+
           <a
             href="#contact"
             onClick={(e) => {
@@ -140,7 +169,7 @@ export default function Navbar() {
             }}
             className="mt-2 px-5 py-3 bg-navy text-ivory font-body text-sm font-medium tracking-wide rounded-sm text-center"
           >
-            Book a Keynote
+            {t.nav.bookKeynote}
           </a>
         </div>
       </motion.div>
